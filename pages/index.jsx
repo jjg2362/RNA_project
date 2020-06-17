@@ -1,7 +1,13 @@
 import React from "react";
 
+import sign from "./SignPage/sign";
+
 const Home = () => {
-  return <div>이히히 아앙</div>;
+  return (
+    <div>
+      <sign />
+    </div>
+  );
 };
 
 export default Home;

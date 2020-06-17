@@ -25,12 +25,14 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "immer": "^6.0.9",
     "nodemon": "^2.0.4",
+    "redux-devtools-extension": "^2.13.8",
     "webpack": "^4.43.0"
   }
 }
