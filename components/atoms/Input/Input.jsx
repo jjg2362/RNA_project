@@ -6,7 +6,7 @@ import * as Styled from "./style";
 const Input = ({
   type = "text",
   value = "",
-  onChangeValue,
+  onChange,
   placeholder = "",
   mb = "0",
 }) => {
@@ -15,7 +15,7 @@ const Input = ({
       <Styled.Input
         type={type}
         value={value}
-        onChange={onChangeValue}
+        onChange={onChange}
         placeholder={placeholder}
         mb={mb}
       />
@@ -26,7 +26,7 @@ const Input = ({
 Input.prototype = {
   type: propTypes.string,
   value: propTypes.any,
-  onChangeValue: propTypes.func,
+  onChange: propTypes.func,
   placeholder: propTypes.string,
   mb: propTypes.string,
 };

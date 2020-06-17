@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { DARK_GRAY, MAIN_COLOR } from "../../../public/color";
-import {} from "../../../public/font";
+import { DARK_GRAY, MAIN_COLOR, WARNING } from "../../../public/color";
+import { EyeOutlined } from "@ant-design/icons";
+import { EyeInvisibleOutlined } from "@ant-design/icons";
 
 export const SignForm = styled.form`
   display: flex;
@@ -21,25 +22,47 @@ export const InputContainer = styled.div`
   }
 `;
 
-export const SignMenu = styled.div`
-  margin-top: 30px;
+export const CheckContainer = styled.div`
   display: flex;
   flex-direction: row;
-  & > a {
-    color: ${MAIN_COLOR};
-    text-decoration: underline;
+  margin-bottom: 19px;
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+`;
+
+export const PasswordShowButton = styled.a`
+  position: absolute;
+  top: 50%;
+  right: 0;
+`;
+
+export const EyeIcon = styled(EyeOutlined)`
+  color: ${MAIN_COLOR};
+`;
+
+export const EyeSlashIcon = styled(EyeInvisibleOutlined)`
+  color: ${MAIN_COLOR};
+`;
+
+export const CheckText = styled.p`
+  position: relative;
+  padding-left: 10px;
+  margin-right: 44px;
+  translate: all 0.3s ease;
+  line-height: 28px;
+  color: ${(props) => (props.checked ? `${MAIN_COLOR}` : `${WARNING}`)};
+  &:last-child {
+    margin-right: 0;
   }
-  & > a:first-child {
-    position: relative;
-    margin-right: 20px;
-    &:after {
-      content: "";
-      position: absolute;
-      top: 4px;
-      right: -12px;
-      width: 1px;
-      height: 18px;
-      background-color: ${MAIN_COLOR};
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: ${(props) =>
+      props.checked ? `${MAIN_COLOR}` : `${WARNING}`};
   }
 `;

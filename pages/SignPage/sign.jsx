@@ -4,6 +4,7 @@ import Router from "next/router";
 
 import * as Styled from "./style";
 import SignInForm from "../../components/templates/Sign/SignIn";
+import SignUpForm from "../../components/templates/Sign/SignUp";
 
 const sign = () => {
   const { isSignIn } = useSelector((state) => state.signReducer);
@@ -24,7 +25,7 @@ const sign = () => {
           <SignInForm />
         </Styled.SignContainer>
         <Styled.SignContainer isSignIn={isSignIn}>
-          {/* <SignUpForm /> */}
+          <SignUpForm />
         </Styled.SignContainer>
       </Styled.LeftContainer>
       {/* 배경 이미지 영역 */}
