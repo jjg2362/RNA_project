@@ -1,7 +1,8 @@
-import style from "styled-components";
 import styled from "styled-components";
 
 export const P = styled.p`
-  font-size: ${(props) => props.style.fontSize};
-  font-weight: ${(props) => props.style.fontWeight};
+  font-size: ${(props) => props.size};
+  font-weight: ${(props) => props.weight};
+  color: ${(props) => props.type};
+  margin-bottom: ${(props) => props.marginBottom};
 `;

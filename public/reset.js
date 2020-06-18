@@ -3,6 +3,7 @@ import { BLACK } from "./color";
 import { TEXT_S, TITLE_S } from "./font";
 
 export const GlobalStyle = createGlobalStyle`
+html {font-size:62.5%;}
 /* 여백 초기화 */
 body,div,ul,li,dl,dd,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form,figure,figcaption{margin:0; padding:0; font-family:'Noto Sans KR', sans-serif; color: ${BLACK}; font-size: ${TEXT_S}; line-height: 1.5;}
 /* a 링크 초기화 */

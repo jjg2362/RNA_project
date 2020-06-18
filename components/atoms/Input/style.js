@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { NORMAL_GRAY, DARK_GRAY, MAIN_COLOR } from "../../../public/color";
-import { TEXT_M } from "../../../public/font";
+import { TEXT_S } from "../../../public/font";
 
 export const Input = styled.input`
   background-image: none;
@@ -10,11 +10,10 @@ export const Input = styled.input`
 
   border-bottom: 1px solid ${NORMAL_GRAY};
   width: 100%;
-  height: 24px;
-  font-size: ${TEXT_M};
+  font-size: ${TEXT_S};
   color: ${DARK_GRAY};
   transition: border-color 0.3s ease;
-  margin-bottom: ${(props) => props.mb};
+  margin-bottom: ${(props) => props.marginBottom};
   &:focus {
     outline: none;
     border-color: ${MAIN_COLOR};

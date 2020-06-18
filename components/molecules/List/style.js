@@ -1,19 +1,19 @@
 import styled, { css } from "styled-components";
-import { DARK_GRAY, MAIN_COLOR } from "../../../public/color";
-// import { TEXT_S } from "font";
+import { WHITE } from "../../../public/color";
 
 export const Card = css`
-  background-color: ${MAIN_COLOR};
+  background-color: ${WHITE};
   border-radius: 10px;
-  padding: 20px;
+  padding: 2rem;
   box-sizing: border-box;
 `;
 
 export const List = styled.ul`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: ${(props) => props.order};
+  flex-direction: ${(props) => props.direction};
+  align-items: ${(props) => props.align};
+  justify-content: ${(props) => props.justify};
   width: ${(props) => props.width};
-  ${(props) => props.card && Card}
+  height: auto;
+  ${(props) => props.card && Card};
 `;

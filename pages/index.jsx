@@ -1,13 +1,12 @@
 import React from "react";
 
-import sign from "./SignPage/sign";
-import Input from "../components/atoms/Input/Input";
+import Header from "../components/organisms/Header";
+import LandingLayout from "../components/templates/LandingLayout";
 
 const Home = () => {
   return (
     <div>
-      <sign />
-      <Input />
+      <Header />
     </div>
   );
 };
