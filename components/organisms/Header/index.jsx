@@ -4,14 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 
 import * as Styled from "./style";
 import { LOGOUT_REQUEST } from "../../../reducers/user";
-import Container from "../../molecules/Container";
 import Image, { Type } from "../../atoms/Image";
-import List, { ListAlignOrder, ListJustifyOrder } from "../../molecules/List";
-import ListItem, {
-  ItemDirection,
-  ItemAlignOrder,
-  ItemJustifyOrder,
-} from "../../molecules/ListItem";
+import A, { ASize, AWeight } from "../../atoms/A";
+import Container from "../../molecules/Container";
+import List, { ListAlignOrder } from "../../molecules/List";
+import ListItem, { ItemAlignOrder } from "../../molecules/ListItem";
 
 const Header = () => {
   const { me } = useSelector((state) => state.userReducer);
@@ -35,9 +32,13 @@ const Header = () => {
         <Styled.HeaderRightContainer>
           <List align={ListAlignOrder.center}>
             <ListItem margin="40px" align={ItemAlignOrder.center}>
-              학교
+              <A hoverEffect={true} size={ASize.s} weight={AWeight.s}>
+                학교
+              </A>
             </ListItem>
-            <ListItem align={ItemAlignOrder.center}>동아리</ListItem>
+            <ListItem align={ItemAlignOrder.center}>
+              <a>동아리</a>
+            </ListItem>
             {/* <Styled.PageNavItem>학교</Styled.PageNavItem> */}
             {/* <Styled.PageNavItem>동아리</Styled.PageNavItem> */}
           </List>
