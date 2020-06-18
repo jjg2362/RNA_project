@@ -31,9 +31,18 @@ const A = ({
   size = ASize.m,
   weight = AWeight.m,
   hoverEffect = false,
+  href,
+  onClick,
 }) => {
   return (
-    <Styled.A type={type} size={size} weight={weight} hoverEffect={hoverEffect}>
+    <Styled.A
+      type={type}
+      size={size}
+      weight={weight}
+      hoverEffect={hoverEffect}
+      href={href}
+      onClick={onClick}
+    >
       {children}
     </Styled.A>
   );
@@ -45,6 +54,8 @@ A.propTypes = {
   size: propTypes.string,
   weight: propTypes.number,
   hoverEffect: propTypes.bool,
+  href: propTypes.string,
+  onClick: propTypes.func,
 };
 
 export default A;

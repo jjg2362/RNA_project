@@ -6,6 +6,7 @@ import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
 import { useDispatch } from "react-redux";
 import { SIGN_UP } from "../../../reducers/sign";
 import { LOGIN_REQUEST } from "../../../reducers/user";
+import A, { ASize, AWeight, AType } from "../../atoms/A";
 
 const SignIn = () => {
   const dispatch = useDispatch();
@@ -27,8 +28,17 @@ const SignIn = () => {
       </Title>
       <SignInForm />
       <Styled.SignMenu>
-        <a>비밀번호찾기</a>
-        <a onClick={onClickToSignUp}>회원가입</a>
+        <A size={ASize.s} weight={AWeight.m} type={AType.primary}>
+          비밀번호찾기
+        </A>
+        <A
+          size={ASize.s}
+          weight={AWeight.m}
+          type={AType.primary}
+          onClick={onClickToSignUp}
+        >
+          회원가입
+        </A>
       </Styled.SignMenu>
     </Styled.SignContainer>
   );

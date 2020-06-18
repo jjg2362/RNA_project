@@ -25,7 +25,7 @@ export const ListDirection = {
 const List = ({
   children,
   card = false,
-  width = "100%",
+  width = "auto",
   justify = ListJustifyOrder.start,
   align = ListAlignOrder.start,
   direction = ListDirection.row,

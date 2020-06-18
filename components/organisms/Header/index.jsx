@@ -8,7 +8,10 @@ import Image, { Type } from "../../atoms/Image";
 import A, { ASize, AWeight } from "../../atoms/A";
 import Container from "../../molecules/Container";
 import List, { ListAlignOrder } from "../../molecules/List";
-import ListItem, { ItemAlignOrder } from "../../molecules/ListItem";
+import ListItem, {
+  ItemAlignOrder,
+  ItemJustifyOrder,
+} from "../../molecules/ListItem";
 
 const Header = () => {
   const { me } = useSelector((state) => state.userReducer);
@@ -32,37 +35,37 @@ const Header = () => {
         <Styled.HeaderRightContainer>
           <List align={ListAlignOrder.center}>
             <ListItem margin="40px" align={ItemAlignOrder.center}>
-              <A hoverEffect={true} size={ASize.s} weight={AWeight.s}>
+              <A hoverEffect={true} size={ASize.s} weight={AWeight.m}>
                 학교
               </A>
             </ListItem>
             <ListItem align={ItemAlignOrder.center}>
-              <a>동아리</a>
+              <A hoverEffect={true} size={ASize.s} weight={AWeight.m}>
+                동아리
+              </A>
             </ListItem>
-            {/* <Styled.PageNavItem>학교</Styled.PageNavItem> */}
-            {/* <Styled.PageNavItem>동아리</Styled.PageNavItem> */}
           </List>
 
-          <Styled.SignNavContainer>
+          <List align={ListAlignOrder.center}>
             {me != null ? (
               <>
-                <Styled.PageNavItem>
+                <ListItem margin="20px" align={ItemAlignOrder.center}>
                   <Styled.MyPageIcon />
-                </Styled.PageNavItem>
-                <Styled.PageNavItem onClick={onClickLogout}>
+                </ListItem>
+                <ListItem align={ItemAlignOrder.center} onClick={onClickLogout}>
                   <Styled.LogoutIcon />
-                </Styled.PageNavItem>
+                </ListItem>
               </>
             ) : (
-              <Styled.PageNavItem>
+              <ListItem align={ItemAlignOrder.center}>
                 <Link href="/SignPage/sign">
                   <a>
                     <Styled.LoginIcon />
                   </a>
                 </Link>
-              </Styled.PageNavItem>
+              </ListItem>
             )}
-          </Styled.SignNavContainer>
+          </List>
         </Styled.HeaderRightContainer>
       </Container>
     </Styled.HeaderContainer>

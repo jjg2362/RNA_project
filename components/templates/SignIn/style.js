@@ -12,11 +12,10 @@ export const SignContainer = styled.div`
 `;
 
 export const SignMenu = styled.div`
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
   & > a {
-    color: ${MAIN_COLOR};
     text-decoration: underline;
   }
   & > a:first-child {

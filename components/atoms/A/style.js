@@ -3,7 +3,10 @@ import { MAIN_COLOR } from "../../../public/color";
 
 export const HoverEffect = css`
   position: relative;
-  height: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+
   &:after {
     content: "";
     position: absolute;

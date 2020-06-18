@@ -5,6 +5,7 @@ import * as Styled from "../SignIn/style";
 import { SIGN_IN } from "../../../reducers/sign";
 import SignUpForm from "../../organisms/SignUpForm";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
+import A, { ASize, AWeight, AType } from "../../atoms/A";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -25,8 +26,17 @@ const SignUp = () => {
       </Title>
       <SignUpForm />
       <Styled.SignMenu>
-        <a>비밀번호찾기</a>
-        <a onClick={onClickLogin}>로그인</a>
+        <A size={ASize.s} weight={AWeight.m} type={AType.primary}>
+          비밀번호찾기
+        </A>
+        <A
+          size={ASize.s}
+          weight={AWeight.m}
+          type={AType.primary}
+          onClick={onClickLogin}
+        >
+          로그인
+        </A>
       </Styled.SignMenu>
     </Styled.SignContainer>
   );
