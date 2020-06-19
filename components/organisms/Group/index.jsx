@@ -1,7 +1,11 @@
 import React from "react";
 
 import * as Styled from "./style";
-import List, { ListDirection, ListAlignOrder } from "../../molecules/List";
+import List, {
+  ListDirection,
+  ListAlignOrder,
+  ListJustifyOrder,
+} from "../../molecules/List";
 import ListItem, {
   ItemSelfOrder,
   ItemJustifyOrder,
@@ -53,20 +57,24 @@ const Group = () => {
   let renderGroupItem = (groupList) =>
     groupList.map((data) => (
       <List
-        card={true}
         direction={ListDirection.col}
         align={ListAlignOrder.center}
+        justify={ListJustifyOrder.between}
         width="32%"
+        height="393px"
         margin="2rem"
+        card={true}
+        shadow={true}
       >
         {" "}
         <ListItem self={ItemSelfOrder.start}>
           <Styled.GroupState>{data.dDay}</Styled.GroupState>
         </ListItem>
-        <ListItem>
-          <Title size={TitleSize.s} weight={TitleWeight.l} marginBottom="1rem">
+        <ListItem width="100%" justify={ItemJustifyOrder.center}>
+          <Title size={TitleSize.s} weight={TitleWeight.l}>
             {data.title}
           </Title>
+          <Styled.GroupTitleBorder />
         </ListItem>
         <ListItem width="100%">
           <Styled.GroupInformationList>

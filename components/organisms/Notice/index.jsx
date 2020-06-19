@@ -18,7 +18,12 @@ const Notice = () => {
           <Image src="clubPromotion.jpg" fit />
           {/* <Mordal /> */}
         </Styled.NoticeImageContainer>
-        <List direction={ListDirection.col} card={true} height="472px">
+        <List
+          direction={ListDirection.col}
+          height="472px"
+          card={true}
+          shadow={true}
+        >
           <ListItem width="100%" height="auto">
             <Title
               size={TitleSize.s}

@@ -8,10 +8,7 @@ import Image, { Type } from "../../atoms/Image";
 import A, { ASize, AWeight } from "../../atoms/A";
 import Container from "../../molecules/Container";
 import List, { ListAlignOrder } from "../../molecules/List";
-import ListItem, {
-  ItemAlignOrder,
-  ItemJustifyOrder,
-} from "../../molecules/ListItem";
+import ListItem, { ItemAlignOrder } from "../../molecules/ListItem";
 
 const Header = () => {
   const { me } = useSelector((state) => state.userReducer);

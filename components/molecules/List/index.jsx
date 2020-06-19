@@ -24,23 +24,25 @@ export const ListDirection = {
 
 const List = ({
   children,
-  card = false,
   width = "auto",
   height = "auto",
   justify = ListJustifyOrder.start,
   align = ListAlignOrder.start,
   direction = ListDirection.row,
   margin = "0",
+  card = false,
+  shadow = false,
 }) => {
   return (
     <Styled.List
-      card={card}
       width={width}
       height={height}
       justify={justify}
       align={align}
       direction={direction}
       margin={margin}
+      card={card}
+      shadow={shadow}
     >
       {children}
     </Styled.List>
@@ -49,13 +51,14 @@ const List = ({
 
 List.propTypes = {
   children: propTypes.node.isRequired,
-  card: propTypes.bool,
   width: propTypes.string,
   height: propTypes.string,
   justify: propTypes.string,
   align: propTypes.string,
   direction: propTypes.string,
   margin: propTypes.string,
+  card: propTypes.bool,
+  shadow: propTypes.bool,
 };
 
 export default List;
