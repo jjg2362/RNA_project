@@ -9,7 +9,9 @@ const LandingLayout = ({ children }) => {
   return (
     <Styled.LandingView>
       <Container>
-        <ClubNavigation />
+        <Styled.NavContainer>
+          <ClubNavigation />
+        </Styled.NavContainer>
 
         <Styled.ContentContainer>{children}</Styled.ContentContainer>
       </Container>

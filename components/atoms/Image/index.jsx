@@ -13,6 +13,7 @@ const Image = ({
   marginBottom = "0px",
   src = "",
   type = Type.img,
+  fit = false,
 }) => {
   const srcPath = "/assets/images/" + src;
 
@@ -23,6 +24,7 @@ const Image = ({
           circle={circle}
           marginBottom={marginBottom}
           src={srcPath}
+          fit={fit}
         />
       ) : (
         <Styled.Background
@@ -39,6 +41,7 @@ Image.propTypes = {
   type: propTypes.string,
   circle: propTypes.bool,
   marginBottom: propTypes.string,
+  fit: propTypes.bool,
 };
 
 export default Image;

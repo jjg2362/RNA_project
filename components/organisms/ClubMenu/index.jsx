@@ -1,8 +1,14 @@
 import React from "react";
+import Link from "next/link";
 
 import * as Styled from "./style";
-import List, { ListOrder } from "../../molecules/List";
-import ListItem from "../../molecules/ListItem";
+import List, { ListDirection } from "../../molecules/List";
+import ListItem, {
+  ItemAlignOrder,
+  ItemJustifyOrder,
+} from "../../molecules/ListItem";
+import A, { ASize, AWeight, AType } from "../../atoms/A";
+import Span, { SpanSize, SpanWeight, SpanType } from "../../atoms/Span";
 
 const menuItems = [
   {
@@ -50,17 +56,40 @@ const menuItems = [
 ];
 
 const ClubMenu = () => {
-  let renderMenuList = (menuData) => (
-    <List card={true} order={ListOrder.left}>
-      <ListItem></ListItem>
-    </List>
-  );
+  let renderMenuList = (menuData) =>
+    menuData.map((data) => (
+      <React.Fragment>
+        {data.type === "favorite" && (
+          <ListItem align={ItemJustifyOrder.center} height="24px">
+            <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
+              <Styled.FavoriteIcon />
+              {data.content}
+            </Span>
+          </ListItem>
+        )}
+        {data.type === "class" && (
+          <ListItem align={ItemAlignOrder.center} height="24px">
+            <Span size={SpanSize.s} weight={SpanWeight.l} type={SpanType.gray}>
+              # {data.content}
+            </Span>
+          </ListItem>
+        )}
+        {data.type === "general" && (
+          <ListItem align={ItemAlignOrder.center} height="20px">
+            <A size={ASize.s} weight={AWeight.m} type={AType.gray}>
+              <Styled.ArrowIcon />
+              {data.content}
+            </A>
+          </ListItem>
+        )}
+      </React.Fragment>
+    ));
 
   return (
-    <List card={true} order={ListOrder.left}>
-      <ListItem></ListItem>
+    <List card={true} direction={ListDirection.col} width="100%">
+      {renderMenuList(menuItems)}
     </List>
   );
 };
 
-export default index;
+export default ClubMenu;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ListItem = styled.li`
   display: flex;
   width: ${(props) => props.width};
-  height: 100%;
+  height: ${(props) => props.height};
   flex-direction: ${(props) => props.direction};
   align-items: ${(props) => props.align};
   justify-content: ${(props) => props.justify};

@@ -8,18 +8,19 @@ const NAV_WIDTH = "283px";
 const INTERVAL = "3rem";
 
 export const HeaderContainer = styled.header`
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 89px;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   background-color: ${WHITE};
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   z-index: 100;
 `;
 
 export const HeaderLeftContainer = styled.div`
   flex: 0 1 ${NAV_WIDTH};
+  display: flex;
+  align-items: center;
 `;
 
 export const HeaderRightContainer = styled.div`

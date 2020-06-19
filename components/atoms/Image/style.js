@@ -4,6 +4,7 @@ export const Image = styled.img.attrs((props) => ({
   src: props.src,
 }))`
   margin-bottom: ${(props) => props.marginBottom};
+  ${(props) => props.fit && ImageFit};
   ${(props) =>
     props.circle &&
     css`
@@ -17,4 +18,9 @@ export const Image = styled.img.attrs((props) => ({
 export const Background = styled.div`
   background: ${(props) => props.src};
   margin-bottom: ${(props) => props.marginBottom};
+`;
+
+const ImageFit = css`
+  width: 100%;
+  height: 100%;
 `;

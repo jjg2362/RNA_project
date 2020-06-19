@@ -28,6 +28,7 @@ export const HoverEffect = css`
 `;
 
 export const A = styled.a`
+  display: inline-block;
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   color: ${(props) => props.type};

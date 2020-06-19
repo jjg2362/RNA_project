@@ -26,21 +26,21 @@ const Header = () => {
       <Container>
         <Styled.HeaderLeftContainer>
           <Link href="/">
-            <a>
+            <A>
               <Image src="Logo.svg" type={Type.img} />
-            </a>
+            </A>
           </Link>
         </Styled.HeaderLeftContainer>
 
         <Styled.HeaderRightContainer>
           <List align={ListAlignOrder.center}>
-            <ListItem margin="4rem" align={ItemAlignOrder.center}>
-              <A hoverEffect={true} size={ASize.s} weight={AWeight.m}>
+            <ListItem height="100%" margin="4rem" align={ItemAlignOrder.center}>
+              <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
                 학교
               </A>
             </ListItem>
-            <ListItem align={ItemAlignOrder.center}>
-              <A hoverEffect={true} size={ASize.s} weight={AWeight.m}>
+            <ListItem height="100%" align={ItemAlignOrder.center}>
+              <A hoverEffect={true} size={ASize.m} weight={AWeight.l}>
                 동아리
               </A>
             </ListItem>

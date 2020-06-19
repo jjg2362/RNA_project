@@ -13,6 +13,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/SignPage/sign": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

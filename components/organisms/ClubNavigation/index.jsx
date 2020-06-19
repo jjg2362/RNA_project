@@ -1,7 +1,12 @@
 import React from "react";
 
 import * as Styled from "./style";
-import List, { ListDirection, ListAlignOrder } from "../../molecules/List";
+import ClubMenu from "../ClubMenu";
+import List, {
+  ListDirection,
+  ListJustifyOrder,
+  ListAlignOrder,
+} from "../../molecules/List";
 import ListItem, {
   ItemDirection,
   ItemAlignOrder,
@@ -9,7 +14,7 @@ import ListItem, {
 } from "../../molecules/ListItem";
 import Image, { Type } from "../../atoms/Image";
 import Title, { TitleSize, TitleWeight } from "../../atoms/Title";
-import P, { PSize, PWeight, PType } from "../../atoms/P";
+import Span, { SpanSize, SpanWeight, SpanType } from "../../atoms/Span";
 
 const dummyData = {
   leader: "조재권",
@@ -27,67 +32,68 @@ const ClubNavigation = () => {
         card={true}
         direction={ListDirection.col}
         align={ListAlignOrder.center}
+        justify={ListJustifyOrder.between}
         width="100%"
+        margin="2rem"
       >
-        <ListItem justify={ItemJustifyOrder.between}>
-          <P size={PSize.s} weight={PWeight.s}>
+        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             동아리 회장
-          </P>
-          <P size={PSize.s} weight={PWeight.s}>
+          </Span>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             {dummyData.leader}
-          </P>
+          </Span>
         </ListItem>
-        <ListItem justify={ItemJustifyOrder.between}>
-          <P size={PSize.s} weight={PWeight.s}>
+        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             인원수
-          </P>
-          <P size={PSize.s} weight={PWeight.s}>
+          </Span>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             {dummyData.heads}
-          </P>
+          </Span>
         </ListItem>
-        <ListItem justify={ItemJustifyOrder.between}>
-          <P size={PSize.s} weight={PWeight.s}>
+        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             누적인원
-          </P>
-          <P size={PSize.s} weight={PWeight.s}>
+          </Span>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             {dummyData.totalHeads}
-          </P>
+          </Span>
         </ListItem>
-        <ListItem justify={ItemJustifyOrder.between}>
-          <P size={PSize.s} weight={PWeight.s}>
+        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             설립일
-          </P>
-          <P size={PSize.s} weight={PWeight.s}>
+          </Span>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             {dummyData.founded}
-          </P>
+          </Span>
         </ListItem>
-        <ListItem justify={ItemJustifyOrder.between}>
-          <P size={PSize.s} weight={PWeight.s}>
+        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             기수
-          </P>
-          <P size={PSize.s} weight={PWeight.s}>
+          </Span>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             {dummyData.numeral}
-          </P>
+          </Span>
         </ListItem>
-        <ListItem justify={ItemJustifyOrder.between}>
-          <P size={PSize.s} weight={PWeight.s}>
+        <ListItem width="inherit" justify={ItemJustifyOrder.between}>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             장소
-          </P>
-          <P size={PSize.s} weight={PWeight.s}>
+          </Span>
+          <Span size={SpanSize.s} weight={SpanWeight.m} type={SpanType.gray}>
             {dummyData.place}
-          </P>
+          </Span>
         </ListItem>
       </List>
     );
   };
 
   return (
-    <Styled.NavContainer>
+    <>
       <List
         width="100%"
         direction={ListDirection.col}
         align={ListAlignOrder.center}
-        margin="2rem"
       >
         <ListItem direction={ItemDirection.col} align={ItemAlignOrder.center}>
           <Image
@@ -96,21 +102,22 @@ const ClubNavigation = () => {
             src="clubLogo.jpg"
             circle={true}
           />
-          <Title size={TitleSize.xs} weight={TitleWeight.l}>
+          <Title size={TitleSize.xs} weight={TitleWeight.xl}>
             동국대학교
           </Title>
-          <P
-            weight={PWeight.m}
-            size={PSize.s}
-            type={PType.gray}
+          <Span
+            size={SpanSize.s}
+            weight={SpanWeight.l}
+            type={SpanType.gray}
             marginBottom="2rem"
           >
             DNA
-          </P>
+          </Span>
         </ListItem>
-        <ListItem>{renderClubInformation()}</ListItem>
+        <ListItem width="inherit">{renderClubInformation()}</ListItem>
       </List>
-    </Styled.NavContainer>
+      <ClubMenu />
+    </>
   );
 };
 

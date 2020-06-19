@@ -1,7 +1,15 @@
 import React from "react";
 import propTypes from "prop-types";
 import * as Styled from "./style";
-import { TEXT_S, TEXT_M, TEXT_L } from "../../../public/font";
+import {
+  WEIGHT_S,
+  WEIGHT_M,
+  WEIGHT_L,
+  WEIGHT_XL,
+  TEXT_S,
+  TEXT_M,
+  TEXT_L,
+} from "../../../public/font";
 import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../public/color";
 
 export const SpanType = {
@@ -18,10 +26,10 @@ export const SpanSize = {
 };
 
 export const SpanWeight = {
-  xs: 100,
-  s: 300,
-  m: 500,
-  l: 700,
+  s: WEIGHT_S,
+  m: WEIGHT_M,
+  l: WEIGHT_L,
+  xl: WEIGHT_XL,
 };
 
 const Span = ({
