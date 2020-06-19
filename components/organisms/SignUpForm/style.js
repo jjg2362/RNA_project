@@ -5,7 +5,7 @@ import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 export const CheckContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 19px;
+  margin-bottom: 2rem;
   opacity: ${(props) => (props.visible ? 1 : 0)};
 `;
 

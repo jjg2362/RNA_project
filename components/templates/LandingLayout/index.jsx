@@ -18,7 +18,7 @@ const LandingLayout = ({ children }) => {
 };
 
 LandingLayout.propTypes = {
-  children: propTypes.node.isRequired,
+  children: propTypes.node,
 };
 
 export default LandingLayout;

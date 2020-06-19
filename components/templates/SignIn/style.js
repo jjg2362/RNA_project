@@ -14,13 +14,13 @@ export const SignContainer = styled.div`
 export const SignMenu = styled.div`
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: 3rem;
   & > a {
     text-decoration: underline;
   }
   & > a:first-child {
     position: relative;
-    margin-right: 20px;
+    margin-right: 2rem;
     &:after {
       content: "";
       position: absolute;

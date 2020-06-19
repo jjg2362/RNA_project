@@ -7,13 +7,5 @@ export const NavContainer = styled.nav`
   flex: 0 1 ${NAV_WIDTH};
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
-`;
-
-export const ClubInformation = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 240px;
+  margin: 30px 0;
 `;

@@ -17,7 +17,7 @@ const SignUp = () => {
 
   return (
     <Styled.SignContainer>
-      <Title size={TitleSize.m} weight={TitleWeight.m} marginBottom="40px">
+      <Title size={TitleSize.m} weight={TitleWeight.m} marginBottom="4rem">
         이메일<span>과</span> 비밀번호
         <span>
           를 <br />

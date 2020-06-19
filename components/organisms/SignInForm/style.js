@@ -13,8 +13,8 @@ export const InputContainer = styled.div`
   width: 100%;
   & > label {
     display: inline-block;
-    margin-bottom: 18px;
-    line-height: 24px;
+    margin-bottom: 1.8rem;
+    line-height: 2.4rem;
     font-weight: 500;
     color: ${DARK_GRAY};
   }

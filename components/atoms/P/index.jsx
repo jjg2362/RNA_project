@@ -44,7 +44,7 @@ const P = ({
 };
 
 P.propTypes = {
-  children: propTypes.string,
+  children: propTypes.node.isRequired,
   size: propTypes.string,
   weight: propTypes.number,
   type: propTypes.string,

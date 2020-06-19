@@ -16,7 +16,7 @@ const SignInForm = () => {
         <label htmlFor="input-email">이메일</label>
         <Input
           id="input-email"
-          marginBottom="60px"
+          marginBottom="6rem"
           value={email}
           onChange={onChangeEmail}
           required
@@ -26,7 +26,7 @@ const SignInForm = () => {
         <label htmlFor="input-password">비밀번호</label>
         <Input
           id="input-password"
-          marginBottom="60px"
+          marginBottom="6rem"
           type="password"
           value={password}
           onChange={onChangePassword}

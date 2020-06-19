@@ -17,5 +17,5 @@ export const ContentContainer = styled.section`
   flex: 1;
   flex-direction: column;
   align-content: space-between;
-  margin-left: 30px;
+  margin-left: 3rem;
 `;

@@ -34,7 +34,7 @@ const Header = () => {
 
         <Styled.HeaderRightContainer>
           <List align={ListAlignOrder.center}>
-            <ListItem margin="40px" align={ItemAlignOrder.center}>
+            <ListItem margin="4rem" align={ItemAlignOrder.center}>
               <A hoverEffect={true} size={ASize.s} weight={AWeight.m}>
                 학교
               </A>
@@ -49,7 +49,7 @@ const Header = () => {
           <List align={ListAlignOrder.center}>
             {me != null ? (
               <>
-                <ListItem margin="20px" align={ItemAlignOrder.center}>
+                <ListItem margin="2rem" align={ItemAlignOrder.center}>
                   <Styled.MyPageIcon />
                 </ListItem>
                 <ListItem align={ItemAlignOrder.center} onClick={onClickLogout}>

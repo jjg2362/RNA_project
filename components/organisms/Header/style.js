@@ -5,7 +5,7 @@ import { WHITE, BLACK } from "../../../public/color";
 import { TEXT_L } from "../../../public/font";
 
 const NAV_WIDTH = "283px";
-const INTERVAL = "30px";
+const INTERVAL = "3rem";
 
 export const HeaderContainer = styled.header`
   width: 100%;

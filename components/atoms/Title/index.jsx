@@ -2,7 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 import * as Styled from "./style";
-import { TITLE_S, TITLE_M, TITLE_L } from "../../../public/font";
+import { TEXT_M, TITLE_S, TITLE_M, TITLE_L } from "../../../public/font";
 import { BLACK, MAIN_COLOR, DARK_GRAY, WARNING } from "../../../public/color";
 
 export const TitleType = {
@@ -13,6 +13,7 @@ export const TitleType = {
 };
 
 export const TitleSize = {
+  xs: TEXT_M,
   s: TITLE_S,
   m: TITLE_M,
   l: TITLE_L,

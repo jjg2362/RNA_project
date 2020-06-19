@@ -35,6 +35,7 @@ const ListItem = ({
   align = ItemAlignOrder.start,
   direction = ItemDirection.row,
   margin = "0",
+  width = "inherit",
 }) => {
   return (
     <Styled.ListItem
@@ -43,6 +44,7 @@ const ListItem = ({
       align={align}
       direction={direction}
       margin={margin}
+      width={width}
     >
       {children}
     </Styled.ListItem>
@@ -56,6 +58,7 @@ ListItem.prototype = {
   align: propTypes.string,
   direction: propTypes.string,
   margin: propTypes.string,
+  width: propTypes.string,
 };
 
 export default ListItem;
